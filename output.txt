@@ -1,6 +1,5 @@
 Date: 2021-03-16
 Total PortIn for date 15 03 21 = 400
-Total PortOut for date 15 03 21 = 341
 GNOC Logs validated for Date : 15 03 21
 ---------------------------------------------------
 Discrepancy found in PortIn FNR logs !!!
