@@ -1,0 +1,53 @@
+WSR PBI Report Preparation - 
+Input prep
+1. Update all PBIs/affiliate with current update in base sheet from USMS/email/JIRA. Path : D:\New folder\LGI_MCC\IncidentReports\USMS PBI Tracker\LGI_PBI_Reporting\Current PBI Update.
+2. Rename the worksheet (PBI_Report_Base_File Week XX worksheet) to current week.  Path : D:\New folder\LGI_MCC\IncidentReports\USMS PBI Tracker\LGI_PBI_Reporting\Current PBI Update.
+3. Delete all the data from Past sheet.
+4. Copy all the data from Current sheet tab and paste in the Past sheet.
+5. Except first row, delete all the data from Current sheet.
+6. Download the sheet with subject from email - Reg:Weekly MCC PBI-INC Relationship Report
+7. Open the sheet and select all data in PBI and INC Counts sheet and then click Merge & Center.
+8. Put filter and Sort A -> Z in Problem ID column.
+9. Delete the blank rows at the end of the sheet.
+10.Cut Status Reason column  and paste after Status.
+11. Copy all data from 'Weekly MCC PBI-INC Relationship Report' sheet and paste in 'PBI_Report_Base_File Week XX worksheet'. Current tab
+12. Delete 3nd row and apply formula starting IT/NW to Active in current sheet.
+13. Put filter and choose the following from status - Assigned, Pending, Draft, Under Inv and Under Rev.
+14. From Problem Coordinator column, other than MLS names, select all PBIs and then put NO in Active Column (check Nitesh alone).
+15. remove the filter from current sheet and delete the duplicate the PBI. 
+16. Post apply filter in column Active --> Yes. And  apply no for child PBI's
+17. Delete N/A from Remarks to Responsible column and component. Now REMOVE ALL FILTERS AND SAVE Apply VLOOKUP - 
+
+=VLOOKUP(A2,'[PBI Base Sheet Week 19.xlsx]Open IT MVNO PBIs'!$A:$N,8,0) - Component
+=VLOOKUP(A2,'[PBI Base Sheet Week 19.xlsx]Open IT MVNO PBIs'!$A:$N,10,0) - In Remark
+=VLOOKUP(A2,'[PBI Base Sheet Week 14.xlsx]Open MVNO PBIs'!$A:$N,11,0) - In TDD
+=VLOOKUP(A2,'[PBI Base Sheet Week 14.xlsx]Open IT MVNO PBIs'!$A:$N,12,0) - Current Status
+=VLOOKUP(A2,'[PBI Base Sheet Week 14.xlsx]Open IT MVNO PBIs'!$A:$N,13,0) - RM/CRQ Number
+=VLOOKUP(A2,'[PBI Base Sheet Week 14.xlsx]Open IT MVNO PBIs'!$A:$N,14,0) - RM Install Date
+
+'[PBI Base Sheet Week 14.xlsx]Open IT MVNO PBIs'!$A:$N,10,0  delete it , post select all data in base sheet and then put 10,0) press enter
+
+18. Select the formula from Week column till the end column and apply for all the rows.   Select column and go to edit link and break link
+19. From Active Column, select Yes to check if formula is applied for all rows.
+20. In the TDD column, validate and update the past date TDDs - it should not be in the past of your current system date.
+21. Delete 0 from RM/CRQ Number and RM Install Date columns.
+22. Select Yes from Active and copy all PBIs column from Current and Paste to the respective place in Changes sheet.
+23. Validate duplicates to find out the new PBIs and completed PBIs.
+24. For completed PBIs - note the component and affiliate.
+25. For created PBIs, get the entire rows copied from Current sheet and place it in the Changes sheet.
+===========
+Graph
+26. In G2 sheet, select any graph -> Analyze -> Refresh All. Validate the total count, if count is less, click Analyze --> Change data source and then increase the row number. Once again refresh all and save it
+27. Copy the data from H to L column (Component  graph) and paste to the respective places in the below graph and delete '0'.
+28. Copy the count in short-code graph  count to past column and then copy the count of Problem IDs' data to the Current one. scroll down
+29. Rename the Week and add a new Week, also the count for the current week to populate the Problem Inflow/Outflow graph.
+30. Update the With TDD (Only date) count and Total count.
+31. Copy the first pivot values from G2 and paste it in G1 pivot.
+32. In G1 sheet, copy the 2nd tables for all countries and take back up at the right side.
+33. Change the Week and update the counts for current and last week.
+34. Save the file.
+----------------------------------
+PPT
+SVN\LGI_MCC\IncidentReports\USMS PBI Tracker\LGI_PBI_Reporting\2020
+35. Open previous week PPT and rename it to Current week.
+36. Copy/paste all graphs at their designated places.
